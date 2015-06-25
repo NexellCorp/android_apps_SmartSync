@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?> 
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android" android:oneshot="false"> 
+    <item android:drawable="@drawable/ic_ss_prg_01" android:duration="70" />
+    <item android:drawable="@drawable/ic_ss_prg_02" android:duration="70" />
+    <item android:drawable="@drawable/ic_ss_prg_03" android:duration="70" />
+    <item android:drawable="@drawable/ic_ss_prg_04" android:duration="70" />
+    <item android:drawable="@drawable/ic_ss_prg_05" android:duration="70" />
+    <item android:drawable="@drawable/ic_ss_prg_06" android:duration="70" />
+    <item android:drawable="@drawable/ic_ss_prg_07" android:duration="70" />
+    <item android:drawable="@drawable/ic_ss_prg_08" android:duration="70" />
+    <item android:drawable="@drawable/ic_ss_prg_09" android:duration="70" />
+    <item android:drawable="@drawable/ic_ss_prg_10" android:duration="70" />
+    <item android:drawable="@drawable/ic_ss_prg_11" android:duration="70" />
+    <item android:drawable="@drawable/ic_ss_prg_12" android:duration="70" />
+    <item android:drawable="@drawable/ic_ss_prg_13" android:duration="70" />
+    <item android:drawable="@drawable/ic_ss_prg_14" android:duration="70" />
+    <item android:drawable="@drawable/ic_ss_prg_15" android:duration="70" />
+    <item android:drawable="@drawable/ic_ss_prg_16" android:duration="70" />
+    <item android:drawable="@drawable/ic_ss_prg_17" android:duration="70" />
+    <item android:drawable="@drawable/ic_ss_prg_18" android:duration="70" />
+    <item android:drawable="@drawable/ic_ss_prg_19" android:duration="70" />
+    <item android:drawable="@drawable/ic_ss_prg_20" android:duration="70" />
+    <item android:drawable="@drawable/ic_ss_prg_21" android:duration="70" />
+    <item android:drawable="@drawable/ic_ss_prg_22" android:duration="70" />
+    <item android:drawable="@drawable/ic_ss_prg_23" android:duration="70" />
+    <item android:drawable="@drawable/ic_ss_prg_24" android:duration="70" />
+    <item android:drawable="@drawable/ic_ss_prg_25" android:duration="70" />
+    <item android:drawable="@drawable/ic_ss_prg_26" android:duration="70" />
+    <item android:drawable="@drawable/ic_ss_prg_27" android:duration="70" />
+    <item android:drawable="@drawable/ic_ss_prg_28" android:duration="70" />
+    <item android:drawable="@drawable/ic_ss_prg_29" android:duration="70" />
+    <item android:drawable="@drawable/ic_ss_prg_30" android:duration="70" />
+    <item android:drawable="@drawable/ic_ss_prg_31" android:duration="70" />
+    <item android:drawable="@drawable/ic_ss_prg_32" android:duration="70" />
+    <item android:drawable="@drawable/ic_ss_prg_33" android:duration="70" />
+    <item android:drawable="@drawable/ic_ss_prg_34" android:duration="70" />
+    <item android:drawable="@drawable/ic_ss_prg_35" android:duration="70" />
+    <item android:drawable="@drawable/ic_ss_prg_36" android:duration="70" />
+    <item android:drawable="@drawable/ic_ss_prg_37" android:duration="70" />
+<!-- 3   <item android:drawable="@drawable/" android:duration="70" />  -->
+<!-- 4   <item android:drawable="@drawable/anim01" android:duration="70" />  -->
+<!-- 5   <item android:drawable="@drawable/anim02" android:duration="70" />  -->
+<!-- 6   <item android:drawable="@drawable/anim03" android:duration="70" />  -->
+</animation-list> 
