@@ -2,6 +2,12 @@
 <resources>
     
     <string name="ect">Powered by elcomtech (www.elcomtech.co.kr)</string>
+    <string name="limit_version">Time limited version</string>
+    
+    <string name="limit_title">Time Limited</string>
+    <string name="limit_msg">Connection timeout.</string>
+    
+    <string name="ok">OK</string>
     
     <string name="app_name">SmartSync</string>
     <string name="enable_p2p_button">P2P On/Off</string>

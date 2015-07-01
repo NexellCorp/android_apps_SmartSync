@@ -1,9 +1,11 @@
 package com.ect.smartsync;
 
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.DialogInterface.OnClickListener;
 import android.content.DialogInterface.OnKeyListener;
 import android.content.Intent;
 import android.content.IntentFilter;
@@ -309,6 +311,8 @@ public class SaparkWFDActivity extends Activity implements
 		hidePorgress();
 		
 		Toast.makeText(mContext, getString(R.string.connected) + " " + dev, Toast.LENGTH_SHORT).show();
+		
+		startLimitConnection();
 	}
 	
 	@Override
@@ -339,6 +343,8 @@ public class SaparkWFDActivity extends Activity implements
 		restart();
 //		deleteSurfaceView();
 		Toast.makeText(mContext, getString(R.string.disconnected) + " " + dev, Toast.LENGTH_SHORT).show();
+		
+		stopLimitConnection();
 	}
 	
 	private void restart(){
@@ -431,6 +437,9 @@ public class SaparkWFDActivity extends Activity implements
 		}	
 		
 		progressDialog.setText(msg);
+		
+		// limit
+		showLimitDialog();
 	}
 	
 	private void hidePorgress(){
@@ -505,6 +514,54 @@ public class SaparkWFDActivity extends Activity implements
 	}
 
 
-
+	AlertDialog mLimitDialog = null;
+	Handler	mLimitConnection = new Handler();
+	boolean mLimitDialogShow = false;
+	Runnable mLimitRunnable = new Runnable() {
+		@Override
+		public void run() {
+			Log.i(TAG, ">>>>>>>>>>>>>>>>> Limited version timeout");
+			
+			controller.requestDisconnect();
+			
+			mLimitDialogShow = true;
+		}
+	};
+	
+	private void showLimitDialog() {
+		if (!mLimitDialogShow) {
+			return;
+		}
+		
+		if (mLimitDialog == null) {
+			AlertDialog.Builder builder = new AlertDialog.Builder(mContext);
+			builder.setTitle(R.string.limit_title);
+			builder.setMessage(R.string.limit_msg);
+			builder.setPositiveButton(R.string.ok, new OnClickListener() {
+				@Override
+				public void onClick(DialogInterface dialog, int arg1) {
+					dialog.dismiss();
+				}
+			});
+			mLimitDialog = builder.create();
+		}
+		
+		if (mLimitDialog.isShowing()) {
+			mLimitDialog.dismiss();
+		}
+		
+		mLimitDialog.show();
+		mLimitDialogShow = false;
+	}
+	
+	private void startLimitConnection() {
+		long time = 5 * 60 * 1000;	// 5 min
+		mLimitConnection.postDelayed(mLimitRunnable, time);
+	}
+	
+	private void stopLimitConnection() {
+		mLimitDialogShow = false;
+		mLimitConnection.removeCallbacks(mLimitRunnable);
+	}
 
 }
